@@ -7,6 +7,9 @@ require "config"
 require "cocos.init"
 
 local function main()
+	collectgarbage("setpause", 100)
+    collectgarbage("setstepmul", 5000)
+
     require("app.MyApp"):create():run()
 end
 

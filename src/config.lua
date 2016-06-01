@@ -13,9 +13,9 @@ CC_DISABLE_GLOBAL = true
 
 -- for module display
 CC_DESIGN_RESOLUTION = {
-    width = 640,
-    height = 960,
-    autoscale = "FIXED_HEIGHT",
+    width = 288,
+    height = 512,
+    autoscale = "EXACT_FIT",
     callback = function(framesize)
         local ratio = framesize.width / framesize.height
         if ratio <= 1.34 then
