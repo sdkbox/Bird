@@ -60,9 +60,9 @@ function MainScene:createLayer()
 	self.rankButton = rankButton
 
 	-- copy right
-	local spriteCopyright = Utils.createAtlasSprite("brand_copyright")
-	spriteCopyright:setPosition(cc.p(screenSize.width / 2, screenSize.height / 2 - 170))
-	backLayer:addChild(spriteCopyright, 1000)
+	-- local spriteCopyright = Utils.createAtlasSprite("brand_copyright")
+	-- spriteCopyright:setPosition(cc.p(screenSize.width / 2, screenSize.height / 2 - 170))
+	-- backLayer:addChild(spriteCopyright, 1000)
 
 	return backLayer
 end
