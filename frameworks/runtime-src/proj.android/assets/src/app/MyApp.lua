@@ -100,24 +100,23 @@ function MyApp:initPlugins()
 end
 
 function MyApp:canShowAd(incAdUse)
-	return false
-	-- if nil == self.showAdTimes or 0 == self.showAdTimes then
-	-- 	self.showAdTimes = 0
-	-- 	return true
-	-- end
-	-- if nil == self.userAdTimes then
-	-- 	self.userAdTimes = 0
-	-- end
+	if nil == self.showAdTimes or 0 == self.showAdTimes then
+		self.showAdTimes = 0
+		return true
+	end
+	if nil == self.userAdTimes then
+		self.userAdTimes = 0
+	end
 
-	-- local v = self.userAdTimes%7
-	-- if v > 0 then
-	-- 	return false
-	-- end
+	local v = self.userAdTimes%7
+	if v > 0 then
+		return false
+	end
 
-	-- if incAdUse then
-	-- 	self:incUserAdEvent()
-	-- end
-	-- return true
+	if incAdUse then
+		self:incUserAdEvent()
+	end
+	return true
 end
 
 function MyApp:incUserAdEvent()
