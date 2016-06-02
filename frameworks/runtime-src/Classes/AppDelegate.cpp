@@ -13,6 +13,36 @@
 #include "ide-support/RuntimeLuaImpl.h"
 #endif
 
+#ifdef SDKBOX_ENABLED
+#include "PluginShareLua.hpp"
+#include "PluginShareLuaHelper.h"
+#endif
+#ifdef SDKBOX_ENABLED
+#include "PluginFacebookLua.hpp"
+#include "PluginFacebookLuaHelper.h"
+#endif
+
+#ifdef SDKBOX_ENABLED
+//sdkbox ads
+#include "PluginSdkboxAdsLua.hpp"
+#include "PluginSdkboxAdsLuaHelper.h"
+
+//sdkbox play
+#include "PluginSdkboxPlayLua.hpp"
+#include "PluginSdkboxPlayLuaHelper.h"
+
+//sdkbox review
+#include "PluginReviewLua.hpp"
+#include "PluginReviewLuaHelper.h"
+
+//google analytics
+#include "PluginGoogleAnalyticsLua.hpp"
+
+//iap
+#include "PluginIAPLua.hpp"
+#include "PluginIAPLuaHelper.h"
+#endif
+
 using namespace CocosDenshion;
 
 USING_NS_CC;
@@ -48,6 +78,34 @@ void AppDelegate::initGLContextAttrs()
 // don't modify or remove this function
 static int register_all_packages()
 {
+
+#ifdef SDKBOX_ENABLED
+    lua_State* luaState = LuaEngine::getInstance()->getLuaStack()->getLuaState();
+    
+    //sdkbox ads
+    register_all_PluginSdkboxAdsLua(luaState);
+    register_all_PluginSdkboxAdsLua_helper(luaState);
+
+    //sdkbox play
+    register_all_PluginSdkboxPlayLua(luaState);
+    register_all_PluginSdkboxPlayLua_helper(luaState);
+
+    //review
+    register_all_PluginReviewLua(luaState);
+    register_all_PluginReviewLua_helper(luaState);
+    
+    //google analytics
+    register_all_PluginGoogleAnalyticsLua(luaState);
+    
+    //iap
+    register_all_PluginIAPLua(luaState);
+    register_all_PluginIAPLua_helper(luaState);
+    
+    //share
+    register_all_PluginShareLua(luaState);
+    register_all_PluginShareLua_helper(luaState);
+#endif
+
     return 0; //flag for packages manager
 }
 

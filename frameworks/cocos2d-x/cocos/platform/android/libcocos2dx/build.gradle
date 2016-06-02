@@ -26,5 +26,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: '../java/libs', include: ['*.jar'])
+    compile project(':facebook_lib')
+    compile project(':gps')
+    compile fileTree(dir: '../java/libs', include: ['*.jar'], exclude: ['twitter.jar'])
 }
