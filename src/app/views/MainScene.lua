@@ -13,13 +13,13 @@ function MainScene:onCreate()
     --     :move(display.center)
     --     :addTo(self)
 
-    -- -- add HelloWorld label
-    -- cc.Label:createWithSystemFont("Hello World", "Arial", 40)
-    --     :move(display.cx, display.cy + 200)
-    --     :addTo(self)
-    self:createLayer()
+    local bg = self:createLayer()
     	:onTouch(handler(self, self.onTouch))
     	:addTo(self)
+
+    self.removeAdButton = cc.Label:createWithSystemFont("Remove Ad", "Arial", 15)
+    	:align(cc.p(0, 1), 0, display.height)
+        :addTo(bg)
 
     sdkbox.PluginGoogleAnalytics:logScreen('MainScene')
 end
@@ -77,6 +77,8 @@ function MainScene:onTouch(event)
 			sdkbox.PluginReview:show(true)
 		elseif Utils.inNode(self.rankButton, point) then
 			sdkbox.PluginSdkboxPlay:showLeaderboard('global')
+		elseif Utils.inNode(self.removeAdButton, point) then
+			app:purchase('remove_ads');
 		else
 		end
 		return true

@@ -10,6 +10,8 @@ function MyApp:onCreate()
 end
 
 function MyApp:loadRes()
+	self.removeAdsEnable = cc.UserDefault:getInstance():getBoolForKey("remove_ads", false)
+
 	self.atlasTexture = cc.Director:getInstance():getTextureCache():addImage("atlas.png")
 	self.AtlasInfo = import('.views.out', CURRENT_MODULE_NAME)
 	self.Utils = import('.views.Utils', CURRENT_MODULE_NAME)
@@ -57,8 +59,13 @@ function MyApp:initPlugins()
 	end)
 	sdkbox.IAP:setListener(function(args)
         if "onSuccess" == args.event then
-                local product = args.product
-                dump(product, "onSuccess:")
+            local product = args.product
+            if 'remove_ads' == product.name then
+	            cc.UserDefault:getInstance():setBoolForKey("remove_ads", true)
+	            self.removeAdsEnable = true
+	        else
+	        	print('unknown purchase object')
+	        end
         elseif "onFailure" == args.event then
                 local product = args.product
                 local msg = args.msg
@@ -72,12 +79,15 @@ function MyApp:initPlugins()
                 dump(product, "onRestored:")
         elseif "onProductRequestSuccess" == args.event then
                 local products = args.products
-                dump(products, "onProductRequestSuccess:")
+                self.iap_products = products
+                -- dump(products, "onProductRequestSuccess:")
         elseif "onProductRequestFailure" == args.event then
                 local msg = args.msg
                 print("msg:", msg)
         elseif "onInitialized" == args.event then
-        	dump(args, 'initialized:')
+        	if not args.ok then
+        		print('IAP initial fail')
+        	end
         else
                 print("unknown event ", args.event)
         end
@@ -101,6 +111,10 @@ function MyApp:initPlugins()
 end
 
 function MyApp:canShowAd(incAdUse)
+	if self.removeAdsEnable then
+		return false
+	end
+
 	if nil == self.userAdTimes then
 		self.userAdTimes = 0
 	end
@@ -124,6 +138,22 @@ function MyApp:incUserAdEvent()
 		self.userAdTimes = 0
 	end
 	self.userAdTimes = self.userAdTimes + 1
+end
+
+function MyApp:purchase(name)
+	if self:getIAPProduct(name) then
+		sdkbox.IAP:purchase(name)
+	else
+		print('invalid iap product name')
+	end
+end
+
+function MyApp:getIAPProduct(name)
+	for i, p in ipairs(self.iap_products) do
+		if p.name == name then
+			return p
+		end
+	end
 end
 
 return MyApp
