@@ -82,40 +82,40 @@ function MyApp:initPlugins()
                 print("unknown event ", args.event)
         end
 	end)
-	sdkbox.PluginShare:setListener(function(responsed)
-	    dump(responsed, "PluginShare share listener info:")
-	    if responsed.response.state == sdkbox.SocialShareState.SocialShareStateSuccess then
-	        print('share success')
-	    end
+	-- sdkbox.PluginShare:setListener(function(responsed)
+	--     dump(responsed, "PluginShare share listener info:")
+	--     if responsed.response.state == sdkbox.SocialShareState.SocialShareStateSuccess then
+	--         print('share success')
+	--     end
 
-	end)
+	-- end)
 	sdkbox.PluginReview:init()
 	sdkbox.PluginSdkboxPlay:init()
 	sdkbox.PluginSdkboxAds:init()
 	sdkbox.IAP:init()
 	sdkbox.PluginGoogleAnalytics:init()
-	sdkbox.PluginShare:init()
+	-- sdkbox.PluginShare:init()
 
 	sdkbox.PluginGoogleAnalytics:startSession()
+	sdkbox.PluginSdkboxPlay:signin()
 end
 
 function MyApp:canShowAd(incAdUse)
-	if nil == self.showAdTimes or 0 == self.showAdTimes then
-		self.showAdTimes = 0
-		return true
-	end
 	if nil == self.userAdTimes then
 		self.userAdTimes = 0
 	end
 
 	local v = self.userAdTimes%7
 	if v > 0 then
+		print('HHH not show ad')
 		return false
 	end
 
 	if incAdUse then
 		self:incUserAdEvent()
 	end
+
+	print('HHH can show ad')
 	return true
 end
 

@@ -11,19 +11,6 @@
                 }
             }
         },
-        "Share": {
-            "platforms": {
-                "SMS": {},
-                "Twitter": {
-                    "params": {
-                        "secret": "nlmUdPNcFGLWhyLu9cD794EDuDrVQnjd0YjTpB6sX8oHIQRrne",
-                        "key": "EuovpLL0UhSGB7Jv5eKFJNMqO"
-                    }
-                },
-                "Facebook": {},
-                "SMS": {}
-            }
-        },
         "Review": {
             "LaunchLimit": 3,
             "DayForReminding": 3,
@@ -39,34 +26,39 @@
         "sdkboxplay": {
             "leaderboards": [
                 {
-                    "id": "CgkI0sux8sMWEAIQAA",
-                    "name": "ldb1"
+                    "id": "CggIzsWA8lIQAhAF",
+                    "name": "global"
                 }
             ],
             "achievements": [
                 {
                     "incremental": false,
-                    "id": "CgkI0sux8sMWEAIQAg",
-                    "name": "ten-games"
+                    "id": "CggIzsWA8lIQAhAA",
+                    "name": "level1"
                 },
                 {
                     "incremental": false,
-                    "id": "CgkI0sux8sMWEAIQAw",
-                    "name": "hunter"
+                    "id": "CggIzsWA8lIQAhAB",
+                    "name": "level2"
                 },
                 {
                     "incremental": false,
-                    "id": "CgkI0sux8sMWEAIQBA",
-                    "name": "craftsman"
+                    "id": "CggIzsWA8lIQAhAC",
+                    "name": "level3"
                 },
                 {
                     "incremental": true,
-                    "id": "CgkI0sux8sMWEAIQBQ",
-                    "name": "incremental"
+                    "id": "CggIzsWA8lIQAhAD",
+                    "name": "level4"
+                },
+                {
+                    "incremental": true,
+                    "id": "CggIzsWA8lIQAhAE",
+                    "name": "level5"
                 }
             ],
-            "connect_on_start": false,
-            "debug": true
+            "connect_on_start": true,
+            "debug": false
         },
         "iap": {
             "items": {
@@ -208,9 +200,6 @@
             "token": "48e8452e9f008fe6d2ef61d742ce6c06",
             "id": "35669"
         },
-        "Facebook": {
-            "debug": true
-        },
         "Appodeal": {
             "app_key": "7acb75c06e543c3c49452f4acb0711377d77b63993cbad49"
         },
@@ -335,19 +324,6 @@
             "LaunchForReminding": 10,
             "UserEventLimit": 0
         },
-        "Share": {
-            "platforms": {
-                "SMS": {},
-                "Twitter": {
-                    "params": {
-                        "secret": "haVcKarM96Sr4390XLQoHjyRUSyuHdkMX6letcc38h8TOWyiR9",
-                        "key": "BUJTV6NEM7BAhhm82B12VbKGy"
-                    }
-                },
-                "Facebook": {},
-                "SMS": {}
-            }
-        },
         "sdkboxplay": {
             "leaderboards": [
                 {
@@ -377,7 +353,7 @@
                     "name": "incremental"
                 }
             ],
-            "connect_on_start": false,
+            "connect_on_start": true,
             "debug": true
         },
         "AdColony": {
@@ -531,9 +507,6 @@
                     "strategy": "weight"
                 }
             ]
-        },
-        "Facebook": {
-            "debug": true
         },
         "Chartboost": {
             "ads": {

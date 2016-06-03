@@ -60,9 +60,9 @@ function MainScene:createLayer()
 	self.rankButton = rankButton
 
 	-- copy right
-	local spriteCopyright = Utils.createAtlasSprite("brand_copyright")
-	spriteCopyright:setPosition(cc.p(screenSize.width / 2, screenSize.height / 2 - 170))
-	backLayer:addChild(spriteCopyright, 1000)
+	-- local spriteCopyright = Utils.createAtlasSprite("brand_copyright")
+	-- spriteCopyright:setPosition(cc.p(screenSize.width / 2, screenSize.height / 2 - 170))
+	-- backLayer:addChild(spriteCopyright, 1000)
 
 	return backLayer
 end
@@ -76,7 +76,7 @@ function MainScene:onTouch(event)
 		elseif Utils.inNode(self.rateButton, point) then
 			sdkbox.PluginReview:show(true)
 		elseif Utils.inNode(self.rankButton, point) then
-			print('click on rank btton')
+			sdkbox.PluginSdkboxPlay:showLeaderboard('global')
 		else
 		end
 		return true

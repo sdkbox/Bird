@@ -76,7 +76,7 @@ function MainScene:onTouch(event)
 		elseif Utils.inNode(self.rateButton, point) then
 			sdkbox.PluginReview:show(true)
 		elseif Utils.inNode(self.rankButton, point) then
-			print('click on rank btton')
+			sdkbox.PluginSdkboxPlay:showLeaderboard('global')
 		else
 		end
 		return true

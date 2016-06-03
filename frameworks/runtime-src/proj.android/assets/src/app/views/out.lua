@@ -69,7 +69,8 @@ a["pipe_up"]={width=52, height=320, x=168, y=646}
 a["score_panel"]={width=238, height=126, x=0, y=516}
 a["text_game_over"]={width=204, height=54, x=784, y=116}
 a["text_ready"]={width=196, height=62, x=584, y=116}
-a["title"]={width=178, height=48, x=702, y=182}
+-- a["title"]={width=178, height=48, x=702, y=182}
+a["title"]={width=79, height=48, x=811, y=182}
 a["tutorial"]={width=114, height=98, x=584, y=182}
 a["white"]={width=32, height=32, x=584, y=448}
 

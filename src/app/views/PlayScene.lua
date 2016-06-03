@@ -444,7 +444,7 @@ function PlayScene:showGameOverLayer()
         local function showBottomButton()
             playButton:setVisible(true)
             rankButton:setVisible(true)
-            shareButton:setVisible(true)
+            -- shareButton:setVisible(true)
         end
 
         local delay1 = cc.DelayTime:create(1)
@@ -458,7 +458,14 @@ function PlayScene:showGameOverLayer()
             showScoreNumberFunc, delay1, showBottomButtonFunc)
         actionNode:runAction(action)
 
-        sdkbox.PluginGoogleAnalytics:logEvent("Score", "game over", "end", self.totalScore);
+        sdkbox.PluginGoogleAnalytics:logEvent("Score", "game over", "end", self.totalScore)
+        sdkbox.PluginSdkboxPlay:submitScore('global', self.totalScore)
+
+        local v = self.totalScore%10
+        local achievementName = 'level' .. v
+        if v > 0 then
+            sdkbox.PluginSdkboxPlay:unlockAchievement(achievementName);
+        end
 
         if app:canShowAd(true) then
 	        sdkbox.PluginSdkboxAds:placement("placement-1");
@@ -491,7 +498,7 @@ function PlayScene:onGameOverTouch(event)
 		if Utils.inNode(self.playButton, point) then
 			Utils.enterPlayScene()
 		elseif Utils.inNode(self.rankButton, point) then
-			print('click on rank btton')
+            sdkbox.PluginSdkboxPlay:showLeaderboard('global')
 		elseif Utils.inNode(self.shareButton, point) then
 
 			local path = ''
