@@ -319,7 +319,7 @@
             "LaunchLimit": 3,
             "DayForReminding": 3,
             "tryPromptWhenInit": true,
-            "AppID": "587767923",
+            "AppID": "1121552311",
             "DayLimit": 1,
             "LaunchForReminding": 10,
             "UserEventLimit": 0
@@ -327,30 +327,15 @@
         "sdkboxplay": {
             "leaderboards": [
                 {
-                    "id": "ldb1",
-                    "name": "ldb1"
+                    "id": "score",
+                    "name": "score"
                 }
             ],
             "achievements": [
                 {
-                    "incremental": false,
-                    "id": "tengames",
-                    "name": "ten-games"
-                },
-                {
-                    "incremental": false,
-                    "id": "hunter",
-                    "name": "hunter"
-                },
-                {
-                    "incremental": false,
-                    "id": "craftsman",
-                    "name": "craftsman"
-                },
-                {
                     "incremental": true,
-                    "id": "CgkI0sux8sMWEAIQBQ",
-                    "name": "incremental"
+                    "id": "level1",
+                    "name": "level1"
                 }
             ],
             "connect_on_start": true,
@@ -527,17 +512,7 @@
             "items": {
                 "remove_ads": {
                     "type": "non_consumable",
-                    "id": "com.cocos2dx.non1"
-                },
-                "coin_package": {
-                    "id": "com.cocos2dx.plugintest2"
-                },
-                "double_coin": {
-                    "type": "non_consumable",
-                    "id": "com.cocos2dx.non2"
-                },
-                "coin_package2": {
-                    "id": "com.cocos2dx.plugintest3"
+                    "id": "com.sdkbox.app.tap.removeads"
                 }
             }
         }

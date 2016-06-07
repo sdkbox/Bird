@@ -149,6 +149,9 @@ function MyApp:purchase(name)
 end
 
 function MyApp:getIAPProduct(name)
+	if nil == self.iap_products then
+		return
+	end
 	for i, p in ipairs(self.iap_products) do
 		if p.name == name then
 			return p
