@@ -136,9 +136,9 @@
                     "postback": "postback",
                     "can_close": false,
                     "mute": false,
-                    "skip_text": "Skip Text",
+                    "skip_text": "Skip",
                     "cache": true,
-                    "button_text": "Button Text",
+                    "button_text": "Download",
                     "button_color": "#6AB344",
                     "type": "interstitial",
                     "id": "bc667417-5fcf-436a-841a-67b76fb9f710",
@@ -152,7 +152,7 @@
                     "show_close_button": true,
                     "progress_type": "clock",
                     "cache": true,
-                    "button_text": "Button Text",
+                    "button_text": "Download",
                     "video_lenght": "short",
                     "button_color": "#6AB344",
                     "kVideoLength": "short",
@@ -167,7 +167,7 @@
                     "show_close_button": false,
                     "progress_type": "bar",
                     "cache": true,
-                    "button_text": "Button Text",
+                    "button_text": "Download",
                     "video_lenght": "long",
                     "button_color": "#6AB344",
                     "type": "reward",
@@ -319,7 +319,7 @@
             "LaunchLimit": 3,
             "DayForReminding": 3,
             "tryPromptWhenInit": true,
-            "AppID": "587767923",
+            "AppID": "1121552311",
             "DayLimit": 1,
             "LaunchForReminding": 10,
             "UserEventLimit": 0
@@ -327,30 +327,15 @@
         "sdkboxplay": {
             "leaderboards": [
                 {
-                    "id": "ldb1",
-                    "name": "ldb1"
+                    "id": "score",
+                    "name": "score"
                 }
             ],
             "achievements": [
                 {
-                    "incremental": false,
-                    "id": "tengames",
-                    "name": "ten-games"
-                },
-                {
-                    "incremental": false,
-                    "id": "hunter",
-                    "name": "hunter"
-                },
-                {
-                    "incremental": false,
-                    "id": "craftsman",
-                    "name": "craftsman"
-                },
-                {
                     "incremental": true,
-                    "id": "CgkI0sux8sMWEAIQBQ",
-                    "name": "incremental"
+                    "id": "level1",
+                    "name": "level1"
                 }
             ],
             "connect_on_start": true,
@@ -379,9 +364,9 @@
                     "creative_type": "managed",
                     "postback": "postback",
                     "mute": false,
-                    "skip_text": "Skip Text",
+                    "skip_text": "Skip",
                     "cache": true,
-                    "button_text": "Button Text",
+                    "button_text": "Download",
                     "button_color": "#6AB344",
                     "type": "interstitial",
                     "id": "6d596bc5-b4c1-48ca-be95-3758fd29a3a5",
@@ -394,7 +379,7 @@
                     "show_close_button": true,
                     "progress_type": "clock",
                     "cache": true,
-                    "button_text": "Button Text",
+                    "button_text": "Download",
                     "video_lenght": "short",
                     "button_color": "#6AB344",
                     "close_delay": 5.0,
@@ -408,7 +393,7 @@
                     "show_close_button": true,
                     "progress_type": "bar",
                     "cache": true,
-                    "button_text": "Button Text",
+                    "button_text": "Download",
                     "video_lenght": "long",
                     "button_color": "#6AB344",
                     "close_delay": 5.4,
@@ -527,17 +512,7 @@
             "items": {
                 "remove_ads": {
                     "type": "non_consumable",
-                    "id": "com.cocos2dx.non1"
-                },
-                "coin_package": {
-                    "id": "com.cocos2dx.plugintest2"
-                },
-                "double_coin": {
-                    "type": "non_consumable",
-                    "id": "com.cocos2dx.non2"
-                },
-                "coin_package2": {
-                    "id": "com.cocos2dx.plugintest3"
+                    "id": "com.sdkbox.app.tap.removeads"
                 }
             }
         }

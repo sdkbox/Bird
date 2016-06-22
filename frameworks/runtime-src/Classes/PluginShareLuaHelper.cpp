@@ -254,6 +254,9 @@ int lua_PluginShareLua_constants(lua_State* L) {
     enums.insert(std::make_pair("Platform_Unknow", 0));
     enums.insert(std::make_pair("Platform_Twitter", 1));
     enums.insert(std::make_pair("Platform_Facebook", 2));
+    enums.insert(std::make_pair("Platform_SMS", 5));
+    enums.insert(std::make_pair("Platform_EMail", 6));
+
     enums.insert(std::make_pair("Platform_Select", 3));
     enums.insert(std::make_pair("Platform_All", 4));
     lua_setTable(L, -1, "SocialPlatform", enums);
