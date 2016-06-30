@@ -121,7 +121,7 @@ function MyApp:canShowAd(incAdUse)
 
 	local v = self.userAdTimes%7
 	if v > 0 then
-		print('HHH not show ad')
+		print('HHH not show ad userAdTimes:' .. self.userAdTimes)
 		return false
 	end
 
@@ -146,6 +146,10 @@ function MyApp:purchase(name)
 	else
 		print('invalid iap product name')
 	end
+end
+
+function MyApp:restorePurchase()
+	sdkbox.IAP:restore()
 end
 
 function MyApp:getIAPProduct(name)
