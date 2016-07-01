@@ -17,9 +17,32 @@ function MainScene:onCreate()
     	:onTouch(handler(self, self.onTouch))
     	:addTo(self)
 
-    self.removeAdButton = cc.Label:createWithSystemFont("Remove Ad", "Arial", 15)
-    	:align(cc.p(0, 1), 0, display.height)
-        :addTo(bg)
+    local removeAdMenuItem = cc.MenuItemImage:create('blue_button00.png', 'blue_button01.png')
+    	:onClicked(function()
+    		app:purchase('remove_ads');
+    	end)
+    	:setAnchorPoint(cc.p(0, 1))
+    removeAdMenuItem:setScale(0.5)
+    local menuItemSize = removeAdMenuItem:getContentSize()
+    cc.Label:createWithSystemFont("Remove Ad", "Arial", 15)
+    	:move(menuItemSize.width/2, menuItemSize.height/2)
+    	:addTo(removeAdMenuItem)
+    cc.Menu:create(removeAdMenuItem)
+    	:move(0, display.height)
+    	:addTo(bg)
+
+    local restoreMenuItem = cc.MenuItemImage:create('blue_button00.png', 'blue_button01.png')
+    	:onClicked(function()
+    		app:restorePurchase()
+    	end)
+    	:setAnchorPoint(cc.p(1, 1))
+    restoreMenuItem:setScale(0.5)
+    cc.Label:createWithSystemFont("Restore Purchase", "Arial", 15)
+    	:move(menuItemSize.width/2, menuItemSize.height/2)
+    	:addTo(restoreMenuItem)
+    cc.Menu:create(restoreMenuItem)
+    	:move(display.width, display.height)
+    	:addTo(bg)
 
     sdkbox.PluginGoogleAnalytics:logScreen('MainScene')
 end
@@ -77,8 +100,6 @@ function MainScene:onTouch(event)
 			sdkbox.PluginReview:show(true)
 		elseif Utils.inNode(self.rankButton, point) then
 			sdkbox.PluginSdkboxPlay:showLeaderboard('global')
-		elseif Utils.inNode(self.removeAdButton, point) then
-			app:purchase('remove_ads');
 		else
 		end
 		return true
