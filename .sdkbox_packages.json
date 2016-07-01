@@ -27,7 +27,7 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
@@ -68,7 +68,7 @@
             "ANDROID_STUDIO_MK": "frameworks/runtime-src/proj.android-studio/app/jni/Android.mk", 
             "XCODE_PROJECT_DIR": "frameworks/runtime-src/proj.ios_mac/Bird.xcodeproj/", 
             "NO_LUA_HELPER": "", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01/", 
             "ANDROID_PROPERTIES": "frameworks/runtime-src/proj.android/project.properties", 
             "ANDROID_ACTIVITY_PATH": "frameworks/runtime-src/proj.android/src/org/cocos2dx/lua/", 
             "COCOS_RESOURCES_DIR": "res/", 
@@ -106,13 +106,13 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
         "constants": {
             "ANDROID_STUDIO_JNI_DIR": "frameworks/runtime-src/proj.android-studio/app/jni/", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28-1/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-1/", 
             "COCOS_PROJECT_DIR": "./", 
             "COCOS_2DX_INSTALLATION_VERSION": "3.8.0", 
             "ANDROID_COCOS_PACKAGE_ROOT": "frameworks/cocos2d-x/cocos/platform/android/java/", 
@@ -196,7 +196,7 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
@@ -249,7 +249,7 @@
             "ANDROID_STUDIO_MK": "frameworks/runtime-src/proj.android-studio/app/jni/Android.mk", 
             "XCODE_PROJECT_DIR": "frameworks/runtime-src/proj.ios_mac/Bird.xcodeproj/", 
             "NO_LUA_HELPER": "", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28-2/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-2/", 
             "ANDROID_PROPERTIES": "frameworks/runtime-src/proj.android/project.properties", 
             "file_path": "frameworks/cocos2d-x/cocos/platform/android/libcocos2dx/libs/support-v4-18.0.0.jar/", 
             "ANDROID_ACTIVITY_PATH": "frameworks/runtime-src/proj.android/src/org/cocos2dx/lua/", 
@@ -288,14 +288,14 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
         "constants": {
             "code": "compile fileTree(dir: '../java/libs', include: ['*.jar'], exclude: ['twitter.jar', 'fabric.jar'])", 
             "ANDROID_STUDIO_JNI_DIR": "frameworks/runtime-src/proj.android-studio/app/jni/", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28-9/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-9/", 
             "COCOS_PROJECT_DIR": "./", 
             "COCOS_2DX_INSTALLATION_VERSION": "3.8.0", 
             "ANDROID_COCOS_PACKAGE_ROOT": "frameworks/cocos2d-x/cocos/platform/android/java/", 
@@ -378,14 +378,14 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
         "constants": {
             "code": "compile fileTree(dir: '../java/libs', include: ['*.jar'], exclude: ['twitter.jar', 'fabric.jar'])", 
             "ANDROID_STUDIO_JNI_DIR": "frameworks/runtime-src/proj.android-studio/app/jni/", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28-13/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-13/", 
             "COCOS_PROJECT_DIR": "./", 
             "COCOS_2DX_INSTALLATION_VERSION": "3.8.0", 
             "plugin_review_res_bundle_path": "frameworks/runtime-src/proj.ios_mac/plugin_review_res_bundle/", 
@@ -474,14 +474,14 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
         "constants": {
             "code": "compile fileTree(dir: '../java/libs', include: ['*.jar'], exclude: ['twitter.jar', 'fabric.jar'])", 
             "ANDROID_STUDIO_JNI_DIR": "frameworks/runtime-src/proj.android-studio/app/jni/", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28-5/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-5/", 
             "COCOS_PROJECT_DIR": "./", 
             "COCOS_2DX_INSTALLATION_VERSION": "3.8.0", 
             "ANDROID_COCOS_PACKAGE_ROOT": "frameworks/cocos2d-x/cocos/platform/android/java/", 
@@ -564,7 +564,7 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
@@ -615,7 +615,7 @@
             "ANDROID_STUDIO_MK": "frameworks/runtime-src/proj.android-studio/app/jni/Android.mk", 
             "XCODE_PROJECT_DIR": "frameworks/runtime-src/proj.ios_mac/Bird.xcodeproj/", 
             "NO_LUA_HELPER": "", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28-6/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-6/", 
             "ANDROID_PROPERTIES": "frameworks/runtime-src/proj.android/project.properties", 
             "file_path": "frameworks/cocos2d-x/cocos/platform/android/libcocos2dx/libs/support-v4-18.0.0.jar/", 
             "ANDROID_ACTIVITY_PATH": "frameworks/runtime-src/proj.android/src/org/cocos2dx/lua/", 
@@ -654,14 +654,14 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
         "constants": {
             "code": "compile fileTree(dir: '../java/libs', include: ['*.jar'], exclude: ['twitter.jar', 'fabric.jar'])", 
             "ANDROID_STUDIO_JNI_DIR": "frameworks/runtime-src/proj.android-studio/app/jni/", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28-7/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-7/", 
             "COCOS_PROJECT_DIR": "./", 
             "COCOS_2DX_INSTALLATION_VERSION": "3.8.0", 
             "ANDROID_COCOS_PACKAGE_ROOT": "frameworks/cocos2d-x/cocos/platform/android/java/", 
@@ -744,7 +744,7 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
@@ -795,7 +795,7 @@
             "ANDROID_STUDIO_MK": "frameworks/runtime-src/proj.android-studio/app/jni/Android.mk", 
             "XCODE_PROJECT_DIR": "frameworks/runtime-src/proj.ios_mac/Bird.xcodeproj/", 
             "NO_LUA_HELPER": "", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28-8/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-8/", 
             "ANDROID_PROPERTIES": "frameworks/runtime-src/proj.android/project.properties", 
             "file_path": "frameworks/cocos2d-x/cocos/platform/android/libcocos2dx/libs/support-v4-18.0.0.jar/", 
             "ANDROID_ACTIVITY_PATH": "frameworks/runtime-src/proj.android/src/org/cocos2dx/lua/", 
@@ -834,14 +834,14 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
         "constants": {
             "code": "compile fileTree(dir: '../java/libs', include: ['*.jar'], exclude: ['twitter.jar', 'fabric.jar'])", 
             "ANDROID_STUDIO_JNI_DIR": "frameworks/runtime-src/proj.android-studio/app/jni/", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28-9/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-9/", 
             "COCOS_PROJECT_DIR": "./", 
             "COCOS_2DX_INSTALLATION_VERSION": "3.8.0", 
             "ANDROID_COCOS_PACKAGE_ROOT": "frameworks/cocos2d-x/cocos/platform/android/java/", 
@@ -924,7 +924,7 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
@@ -977,7 +977,7 @@
             "ANDROID_STUDIO_MK": "frameworks/runtime-src/proj.android-studio/app/jni/Android.mk", 
             "XCODE_PROJECT_DIR": "frameworks/runtime-src/proj.ios_mac/Bird.xcodeproj/", 
             "NO_LUA_HELPER": "", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28-10/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-10/", 
             "ANDROID_PROPERTIES": "frameworks/runtime-src/proj.android/project.properties", 
             "file_path": "frameworks/cocos2d-x/cocos/platform/android/libcocos2dx/libs/support-v4-18.0.0.jar/", 
             "ANDROID_ACTIVITY_PATH": "frameworks/runtime-src/proj.android/src/org/cocos2dx/lua/", 
@@ -1016,14 +1016,14 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
         "constants": {
             "code": "compile fileTree(dir: '../java/libs', include: ['*.jar'], exclude: ['twitter.jar', 'fabric.jar'])", 
             "ANDROID_STUDIO_JNI_DIR": "frameworks/runtime-src/proj.android-studio/app/jni/", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-24-11/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-11/", 
             "COCOS_PROJECT_DIR": "./", 
             "COCOS_2DX_INSTALLATION_VERSION": "3.8.0", 
             "plugin_review_res_bundle_path": "frameworks/runtime-src/proj.ios_mac/plugin_review_res_bundle/", 
@@ -1115,7 +1115,7 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
@@ -1175,7 +1175,7 @@
             "ANDROID_STUDIO_MK": "frameworks/runtime-src/proj.android-studio/app/jni/Android.mk", 
             "XCODE_PROJECT_DIR": "frameworks/runtime-src/proj.ios_mac/Bird.xcodeproj/", 
             "NO_LUA_HELPER": "", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28-12/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-12/", 
             "ANDROID_PROPERTIES": "frameworks/runtime-src/proj.android/project.properties", 
             "file_path": "frameworks/cocos2d-x/cocos/platform/android/libcocos2dx/libs/support-v4-18.0.0.jar/", 
             "ANDROID_ACTIVITY_PATH": "frameworks/runtime-src/proj.android/src/org/cocos2dx/lua/", 
@@ -1214,7 +1214,7 @@
             2, 
             2, 
             4, 
-            8
+            11
         ], 
         "result": "ok", 
         "message": "success", 
@@ -1267,7 +1267,7 @@
             "ANDROID_STUDIO_MK": "frameworks/runtime-src/proj.android-studio/app/jni/Android.mk", 
             "XCODE_PROJECT_DIR": "frameworks/runtime-src/proj.ios_mac/Bird.xcodeproj/", 
             "NO_LUA_HELPER": "", 
-            "COCOS_BACKUP_DIR": "backup-2016-06-28-4/", 
+            "COCOS_BACKUP_DIR": "backup-2016-07-01-4/", 
             "ANDROID_PROPERTIES": "frameworks/runtime-src/proj.android/project.properties", 
             "file_path": "frameworks/cocos2d-x/cocos/platform/android/libcocos2dx/libs/support-v4-18.0.0.jar/", 
             "ANDROID_ACTIVITY_PATH": "frameworks/runtime-src/proj.android/src/org/cocos2dx/lua/", 
