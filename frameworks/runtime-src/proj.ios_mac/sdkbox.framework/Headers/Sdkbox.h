@@ -7,11 +7,7 @@
 #ifndef _CC_SDKBOX_H_
 #define _CC_SDKBOX_H_
 
-<<<<<<< HEAD
-#define SDKBOX_VERSION_STR  "sdkbox V2.2.4.4"
-=======
 #define SDKBOX_VERSION_STR  "sdkbox V2.2.4.8"
->>>>>>> master
 
 /**
  * Only certain compilers support __attribute__((deprecated)).
