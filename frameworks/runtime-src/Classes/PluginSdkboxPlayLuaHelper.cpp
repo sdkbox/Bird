@@ -62,7 +62,7 @@ public:
 
     virtual void onMyScore( const std::string& leaderboard_name, int time_span, int collection_type, long score ) {
         LuaStack* stack = LUAENGINE->getLuaStack();
-        
+
         LuaValueDict dict;
         dict.insert(std::make_pair("name", LuaValue::stringValue("onMyScore")));
         dict.insert(std::make_pair("leaderboard_name", LuaValue::stringValue(leaderboard_name)));
@@ -75,7 +75,7 @@ public:
 
     virtual void onMyScoreError( const std::string& leaderboard_name, int time_span, int collection_type, int error_code, const std::string& error_description) {
         LuaStack* stack = LUAENGINE->getLuaStack();
-        
+
         LuaValueDict dict;
         dict.insert(std::make_pair("name", LuaValue::stringValue("onMyScoreError")));
         dict.insert(std::make_pair("leaderboard_name", LuaValue::stringValue(leaderboard_name)));
@@ -92,7 +92,7 @@ public:
                                         int collection_type,
                                         const std::string& json_with_score_entries ) {
         LuaStack* stack = LUAENGINE->getLuaStack();
-        
+
         LuaValueDict dict;
         dict.insert(std::make_pair("name", LuaValue::stringValue("onPlayerCenteredScores")));
         dict.insert(std::make_pair("leaderboard_name", LuaValue::stringValue(leaderboard_name)));
@@ -109,7 +109,7 @@ public:
                                              int error_code,
                                              const std::string& error_description) {
         LuaStack* stack = LUAENGINE->getLuaStack();
-        
+
         LuaValueDict dict;
         dict.insert(std::make_pair("name", LuaValue::stringValue("onPlayerCenteredScoresError")));
         dict.insert(std::make_pair("leaderboard_name", LuaValue::stringValue(leaderboard_name)));
@@ -146,7 +146,7 @@ public:
 
     virtual void onIncrementalAchievementStepError( const std::string& achievement_name, int steps, int error_code, const std::string& error_description ) {
         LuaStack* stack = LUAENGINE->getLuaStack();
-        
+
         LuaValueDict dict;
         dict.insert(std::make_pair("name", LuaValue::stringValue("onIncrementalAchievementStepError")));
         dict.insert(std::make_pair("achievement_name", LuaValue::stringValue(achievement_name)));
@@ -171,7 +171,7 @@ public:
 
     virtual void onAchievementUnlockError( const std::string& achievement_name, int error_code, const std::string& error_description ) {
         LuaStack* stack = LUAENGINE->getLuaStack();
-        
+
         LuaValueDict dict;
         dict.insert(std::make_pair("name", LuaValue::stringValue("onIncrementalAchievementStepError")));
         dict.insert(std::make_pair("achievement_name", LuaValue::stringValue(achievement_name)));
@@ -183,7 +183,7 @@ public:
 
     virtual void onAchievementsLoaded( bool reload_forced, const std::string& json_achievements_info ) {
         LuaStack* stack = LUAENGINE->getLuaStack();
-        
+
         LuaValueDict dict;
         dict.insert(std::make_pair("name", LuaValue::stringValue("onAchievementsLoaded")));
         dict.insert(std::make_pair("reload_forced", LuaValue::booleanValue(reload_forced)));
@@ -194,7 +194,7 @@ public:
 
     virtual void onSetSteps( const std::string& step_name, int steps ) {
         LuaStack* stack = LUAENGINE->getLuaStack();
-        
+
         LuaValueDict dict;
         dict.insert(std::make_pair("name", LuaValue::stringValue("onSetSteps")));
         dict.insert(std::make_pair("step_name", LuaValue::stringValue(step_name)));
@@ -205,7 +205,7 @@ public:
 
     virtual void onSetStepsError( const std::string& step_name, int steps, int error_code, const std::string& error_description ) {
         LuaStack* stack = LUAENGINE->getLuaStack();
-        
+
         LuaValueDict dict;
         dict.insert(std::make_pair("name", LuaValue::stringValue("onSetStepsError")));
         dict.insert(std::make_pair("step_name", LuaValue::stringValue(step_name)));
@@ -218,7 +218,7 @@ public:
 
     virtual void onReveal( const std::string& reveal_name) {
         LuaStack* stack = LUAENGINE->getLuaStack();
-        
+
         LuaValueDict dict;
         dict.insert(std::make_pair("name", LuaValue::stringValue("onReveal")));
         dict.insert(std::make_pair("reveal_name", LuaValue::stringValue(reveal_name)));
@@ -228,7 +228,7 @@ public:
 
     virtual void onRevealError( const std::string& reveal_name, int error_code, const std::string& error_description ) {
         LuaStack* stack = LUAENGINE->getLuaStack();
-        
+
         LuaValueDict dict;
         dict.insert(std::make_pair("name", LuaValue::stringValue("onRevealError")));
         dict.insert(std::make_pair("reveal_name", LuaValue::stringValue(reveal_name)));

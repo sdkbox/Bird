@@ -1,3 +1,10 @@
+libcocos2dlua.so
+proguard-project.txt
+gdb.setup
+gdbserver
+*.zip
+
+simulator/
 
 # Created by https://www.gitignore.io/api/xcode,osx,android,windows,gradle,visualstudio,visualstudiocode
 

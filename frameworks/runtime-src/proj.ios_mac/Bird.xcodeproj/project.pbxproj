@@ -78,6 +78,7 @@
 		536843FB8410481EE181D945 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496641DF92545080A75471AF /* MessageUI.framework */; };
 		54B241CB9F063798B8738ED0 /* PluginChartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CC4A1AA9A7E10544575D30 /* PluginChartboost.framework */; };
 		55664751BA5AC68E488EC4B0 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FE4078A7CC95413A1468B4 /* libz.1.2.5.dylib */; };
+		59E64EB61D1DF13300F6568F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59E64EB51D1DF13300F6568F /* Images.xcassets */; };
 		5AFA43F39ED962D4CFD23F73 /* PluginReviewLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4754C879B0A0971ABEC4B4B /* PluginReviewLua.cpp */; };
 		5D1C45B19F343B881A923CC8 /* PluginAdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81334AE3823F4EAFEED2319E /* PluginAdColony.framework */; };
 		5FE64127BA6102D60D06A994 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75734EDA8C28ECD7DA86E707 /* CoreText.framework */; };
@@ -358,6 +359,7 @@
 		561847CA8B08DF307EF4768D /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = TwitterKit.framework/Resources/TwitterKitResources.bundle/sk.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		57184F7B8475D376B98E1A7B /* PluginAppnextLua.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginAppnextLua.hpp; path = ../Classes/PluginAppnextLua.hpp; sourceTree = SOURCE_ROOT; };
 		57DB4B6A960FF7C14BF090E0 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = plugin_review_res_bundle/uk.lproj/SdkboxReviewResLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		59E64EB51D1DF13300F6568F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Bird-mobile/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		5A804A5E9B1819D9F6315F55 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/EventKitUI.framework; sourceTree = DEVELOPER_DIR; };
 		5AB54956BE5121EF81F35E48 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
 		5AD54BC78F0C743E207C989D /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
@@ -885,6 +887,7 @@
 		F293BC4615EB859D00256477 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				59E64EB51D1DF13300F6568F /* Images.xcassets */,
 				C05D1C111923449100B808A4 /* config.json */,
 				C03781B718BF655400FE4F13 /* res */,
 				C03781B818BF655400FE4F13 /* src */,
@@ -1064,6 +1067,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15A8A4491834C64F00142BE0 /* Icon-114.png in Resources */,
+				59E64EB61D1DF13300F6568F /* Images.xcassets in Resources */,
 				5023811D17EBBCAC00990C9B /* Icon-120.png in Resources */,
 				5091733B17ECE17A00D62437 /* Icon-100.png in Resources */,
 				5023811B17EBBCAC00990C9B /* Default@2x.png in Resources */,
@@ -1427,7 +1431,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"";
@@ -1487,6 +1494,7 @@
 					"-fobjc-arc",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sdkbox.app.tap;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -1498,7 +1506,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hugo huang (766ZZ8NZ3D)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"";
@@ -1557,6 +1568,7 @@
 					"-fobjc-arc",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sdkbox.app.tap;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
