@@ -3,6 +3,7 @@ proguard-project.txt
 gdb.setup
 gdbserver
 *.zip
+*.d
 
 simulator/
 

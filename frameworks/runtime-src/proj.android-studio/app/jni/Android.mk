@@ -1,5 +1,4 @@
-LOCAL_PATH := $(call \
-my-dir)
+LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
@@ -36,10 +35,6 @@ hellolua/main.cpp \
 ../../../Classes/PluginChartboostLuaHelper.h \
 ../../../Classes/PluginInMobiLua.cpp \
 ../../../Classes/PluginInMobiLuaHelper.cpp \
-../../../Classes/PluginVungleLua.hpp \
-../../../Classes/PluginVungleLua.cpp \
-../../../Classes/PluginVungleLuaHelper.cpp \
-../../../Classes/PluginVungleLuaHelper.h \
 ../../../Classes/PluginLeadBoltLua.cpp \
 ../../../Classes/PluginLeadBoltLuaHelper.cpp \
 ../../../Classes/PluginAppnextLua.cpp \

@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
     <string name="app_name">SDKBOX Tap</string>
-    <string name="facebook_app_id">your_app_id</string>
+    <string name="facebook_app_id">293226521011029</string>
+    <string name="google_app_id">22250791630</string>
 </resources>
