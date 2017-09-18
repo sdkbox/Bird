@@ -113,6 +113,42 @@ int lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_stopPeriodicalDispatch(lu
 #endif
     return 0;
 }
+int lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_logECommerce(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"sdkbox.PluginGoogleAnalytics",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S) - 1;
+
+    if (argc == 1)
+    {
+        std::map<std::string, std::string> arg0;
+        ok &= luaval_to_std_map_string_string(tolua_S, 2, &arg0, "sdkbox.PluginGoogleAnalytics:logECommerce");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_logECommerce'", nullptr);
+            return 0;
+        }
+        sdkbox::PluginGoogleAnalytics::logECommerce(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginGoogleAnalytics:logECommerce",argc, 1);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_logECommerce'.",&tolua_err);
+#endif
+    return 0;
+}
 int lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_setDryRun(lua_State* tolua_S)
 {
     int argc = 0;
@@ -188,6 +224,42 @@ int lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_logEvent(lua_State* tolua
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
     tolua_error(tolua_S,"#ferror in function 'lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_logEvent'.",&tolua_err);
+#endif
+    return 0;
+}
+int lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_enableExceptionReporting(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"sdkbox.PluginGoogleAnalytics",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S) - 1;
+
+    if (argc == 1)
+    {
+        bool arg0;
+        ok &= luaval_to_boolean(tolua_S, 2,&arg0, "sdkbox.PluginGoogleAnalytics:enableExceptionReporting");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_enableExceptionReporting'", nullptr);
+            return 0;
+        }
+        sdkbox::PluginGoogleAnalytics::enableExceptionReporting(arg0);
+        lua_settop(tolua_S, 1);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "sdkbox.PluginGoogleAnalytics:enableExceptionReporting",argc, 1);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_enableExceptionReporting'.",&tolua_err);
 #endif
     return 0;
 }
@@ -693,8 +765,10 @@ int lua_register_PluginGoogleAnalyticsLua_PluginGoogleAnalytics(lua_State* tolua
         tolua_function(tolua_S,"createTracker", lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_createTracker);
         tolua_function(tolua_S,"setMetric", lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_setMetric);
         tolua_function(tolua_S,"stopPeriodicalDispatch", lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_stopPeriodicalDispatch);
+        tolua_function(tolua_S,"logECommerce", lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_logECommerce);
         tolua_function(tolua_S,"setDryRun", lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_setDryRun);
         tolua_function(tolua_S,"logEvent", lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_logEvent);
+        tolua_function(tolua_S,"enableExceptionReporting", lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_enableExceptionReporting);
         tolua_function(tolua_S,"dispatchPeriodically", lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_dispatchPeriodically);
         tolua_function(tolua_S,"init", lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_init);
         tolua_function(tolua_S,"logScreen", lua_PluginGoogleAnalyticsLua_PluginGoogleAnalytics_logScreen);
@@ -717,12 +791,39 @@ int lua_register_PluginGoogleAnalyticsLua_PluginGoogleAnalytics(lua_State* tolua
 TOLUA_API int register_all_PluginGoogleAnalyticsLua(lua_State* tolua_S)
 {
 	tolua_open(tolua_S);
-	
-	tolua_module(tolua_S,"sdkbox",0);
-	tolua_beginmodule(tolua_S,"sdkbox");
+
+	std::stringstream ss("sdkbox");
+    std::vector<std::string> nsvec;
+    std::string item;
+    while (std::getline(ss, item, '.')) {
+        nsvec.push_back(item);
+    }
+    int nsLen = nsvec.size();
+    item = nsvec.front();
+    nsvec.erase(nsvec.begin());
+
+    tolua_module(tolua_S, item.c_str(), 0);
+    tolua_beginmodule(tolua_S, item.c_str());
+
+    while (nsvec.size() > 0) {
+        item = nsvec.front();
+        nsvec.erase(nsvec.begin());
+        lua_pushstring(tolua_S, item.c_str()); // m name
+        lua_rawget(tolua_S, -2);             // m value
+        if (!lua_istable(tolua_S, -1)) {
+            lua_pop(tolua_S, 1);             // m
+            lua_newtable(tolua_S);           // m t
+            lua_pushstring(tolua_S, item.c_str()); // m t name
+            lua_pushvalue(tolua_S, -2);      // m t name t
+            lua_rawset(tolua_S, -4);         // m t
+        }
+    }
 
 	lua_register_PluginGoogleAnalyticsLua_PluginGoogleAnalytics(tolua_S);
 
+	if (nsLen > 1) {
+        lua_pop(tolua_S, nsLen - 1); // m
+    }
 	tolua_endmodule(tolua_S);
 
 	sdkbox::setProjectType("lua");

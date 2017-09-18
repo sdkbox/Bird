@@ -22,7 +22,7 @@ public:
 
     void start() {
         CCDirector::sharedDirector()->getScheduler()
-            ->scheduleSelector(schedule_selector(LuaIAPCallbackObj::callback), this, 0.1, false);
+            ->scheduleSelector(schedule_selector(LuaIAPCallbackObj::callback), this, 0.1, 0, 0.0f, false);
     }
 
     void callback(float dt) {
@@ -30,7 +30,6 @@ public:
         stack->pushLuaValueDict(_luaValueDict);
         stack->executeFunctionByHandler(_luaHandler, 1);
 
-        CCDirector::sharedDirector()->getScheduler()->unscheduleAllForTarget(this);
         release();
     }
 
@@ -143,6 +142,7 @@ public:
         dicLua.insert(std::make_pair("receipt", LuaValue::stringValue(p.receipt)));
         dicLua.insert(std::make_pair("receiptCipheredPayload", LuaValue::stringValue(p.receiptCipheredPayload)));
         dicLua.insert(std::make_pair("priceValue", LuaValue::floatValue(p.priceValue)));
+        dicLua.insert(std::make_pair("transactionID", LuaValue::stringValue(p.transactionID)));
         switch (p.type) {
             case sdkbox::IAP_Type::CONSUMABLE: {
                 dicLua.insert(std::make_pair("type", LuaValue::stringValue("CONSUMABLE")));

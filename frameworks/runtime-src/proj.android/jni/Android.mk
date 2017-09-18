@@ -1,5 +1,4 @@
-LOCAL_PATH := $(call \
-my-dir)
+LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
@@ -51,6 +50,8 @@ LOCAL_CPPFLAGS := -DSDKBOX_ENABLED
 LOCAL_LDLIBS := -landroid \
 -llog
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
+LOCAL_SHARED_LIBRARIES := libadcolonyso \
+libjsso
 LOCAL_WHOLE_STATIC_LIBRARIES := PluginReview \
 sdkbox \
 PluginSdkboxPlay \
