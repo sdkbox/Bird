@@ -179,6 +179,31 @@ public:
         stack->pushLuaValueDict(dict);
         stack->executeFunctionByHandler(mLuaHandler, 1);
     }
+    void onRequestGiftResult(bool result, const std::string& msg)
+    {
+        LuaStack* stack = LUAENGINE->getLuaStack();
+
+        LuaValueDict dict;
+        dict.insert(std::make_pair("name", LuaValue::stringValue(__FUNCTION__)));
+        dict.insert(std::make_pair("result", LuaValue::booleanValue(result)));
+        dict.insert(std::make_pair("msg", LuaValue::stringValue(msg)));
+
+        stack->pushLuaValueDict(dict);
+        stack->executeFunctionByHandler(mLuaHandler, 1);
+    }
+    void onSendGiftResult(bool result, const std::string& msg)
+    {
+        LuaStack* stack = LUAENGINE->getLuaStack();
+
+        LuaValueDict dict;
+        dict.insert(std::make_pair("name", LuaValue::stringValue(__FUNCTION__)));
+        dict.insert(std::make_pair("result", LuaValue::booleanValue(result)));
+        dict.insert(std::make_pair("msg", LuaValue::stringValue(msg)));
+
+        stack->pushLuaValueDict(dict);
+        stack->executeFunctionByHandler(mLuaHandler, 1);
+    }
+
 private:
     int mLuaHandler;
 };
